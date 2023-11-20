@@ -1,0 +1,2 @@
+
+imgs for "ShuttleSet\ShuttleSet22\data4acreg\He_Bing_Jiao_Chen_Yu_Fei_GWANGJU_YONEX_Korea_Masters_2022_Final/rally_3-18.csv"

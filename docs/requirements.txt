@@ -1,0 +1,10 @@
+matplotlib==3.8.0
+numpy==1.24.1
+opencv_python==4.8.1.78
+opencv_python_headless==4.8.1.78
+pandas==2.1.2
+Pillow==10.1.0
+scipy==1.11.3
+seaborn==0.13.0
+torchsummary==1.5.1
+tqdm==4.66.1

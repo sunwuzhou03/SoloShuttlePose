@@ -1,0 +1,4 @@
+rally,ball_round,time,frame_num,roundscore_A,roundscore_B,player,server,type,aroundhead,backhand,landing_height,landing_area,landing_x,landing_y,lose_reason,getpoint_player,player_location_area,player_location_x,player_location_y,opponent_location_area,opponent_location_x,opponent_location_y,set,match_id,rally_id
+28,1,00:17:52,32180,11,17,0,1,short service,0.0,1,2.0,7,-0.6817073170731708,0.6013020833333336,,,8,179.5,327.35,8,112.2,663.59,1,4,311
+28,2,00:17:53,32199,11,17,6,2,push/rush,0.0,1,1.0,9,0.7475609756097562,-1.5122395833333335,,,8,140.0,600.94,8,165.0,315.6,1,4,311
+28,3,00:17:54,32233,11,17,0,3,drop,0.0,1,2.0,7,0.8756097560975611,-0.0042708333333332,touched the net,0.0,8,219.6,212.76,8,192.4,664.61,1,4,311

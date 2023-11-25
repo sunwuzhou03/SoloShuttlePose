@@ -59,7 +59,7 @@ warnings.simplefilter('ignore', np.RankWarning)
 #     clear_file(video_name,f"{result_path}/ball/event")
 #     clear_file(video_name,f"{result_path}/ball/traj2img")
 
-result_path="E:/SoloShuttlePoseRes/new_res"
+result_path="E:/SoloShuttlePoseRes/res"
 
 clear_file("loca_info(denoise)",f"{result_path}/ball")
 clear_file("event",f"{result_path}/ball")
@@ -69,6 +69,7 @@ print("-" * 10 + "Starting Ball Detection" + "" * 10)
 for res_root, res_dirs, res_files in os.walk(f"{result_path}/ball/loca_info"):
     for res_file in res_files:
         _, ext = os.path.splitext(res_file)
+ 
         if ext.lower() in ['.json']:
 
             # fake video
@@ -76,7 +77,7 @@ for res_root, res_dirs, res_files in os.walk(f"{result_path}/ball/loca_info"):
             video_name = os.path.splitext(os.path.basename(video_path))[0]
 
             orivi_name, start_frame = extract_numbers(video_name)    
-        
+            print(video_name)      
             # denoise file save path
             dd_save_dir = os.path.join(f"{result_path}/ball", f"loca_info(denoise)/{orivi_name}")
             os.makedirs(dd_save_dir, exist_ok=True)
@@ -91,5 +92,5 @@ for res_root, res_dirs, res_files in os.walk(f"{result_path}/ball/loca_info"):
             smooth(json_path,court ,dd_save_dir)
             
             dd_json_path = f"{dd_save_dir}/{video_name}.json"
-            event_detect(dd_json_path, f"{result_path}/ball")
+            # event_detect(dd_json_path, f"{result_path}/ball")
 print("" * 10 + "End Badminton Detection" + "" * 10)

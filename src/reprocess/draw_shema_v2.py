@@ -28,7 +28,7 @@ folder_path = "ShuttleSet\ShuttleSet22\data4acreg"
 # 调用函数进行随机抽取
 data_path = random_csv_file(folder_path)
 
-data_path="ShuttleSet\ShuttleSet22\dataset/valid\AN_Se_Young_Gregoria_Mariska_TUNJUNG_Malaysia_Masters_2022_SemiFinals/rally_1-1.csv"
+# data_path="ShuttleSet\ShuttleSet22\dataset/valid\AN_Se_Young_Gregoria_Mariska_TUNJUNG_Malaysia_Masters_2022_SemiFinals/rally_1-1.csv"
 
 
 if data_path:

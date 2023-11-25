@@ -198,21 +198,21 @@ class AdhocHitDetector(HitDetector):
         return result, is_hit
     
 
-def scale_data(x):
-    x = np.array(x)
-    def scale_by_col(x, cols, eps=1e-6):
-        x_ = np.array(x[:, cols])
-        idx = np.abs(x_) < eps
-        m, M = np.min(x_[~idx]), np.max(x_[~idx])
-        x_[~idx] = (x_[~idx] - m) / (M - m) + 1
-        x[:, cols] = x_
-        return x
+# def scale_data(x):
+#     x = np.array(x)
+#     def scale_by_col(x, cols, eps=1e-6):
+#         x_ = np.array(x[:, cols])
+#         idx = np.abs(x_) < eps
+#         m, M = np.min(x_[~idx]), np.max(x_[~idx])
+#         x_[~idx] = (x_[~idx] - m) / (M - m) + 1
+#         x[:, cols] = x_
+#         return x
 
-    even_cols = [2*i for i in range(x.shape[1] // 2)]
-    odd_cols = [2*i+1 for i in range(x.shape[1] // 2)]
-    x = scale_by_col(x, even_cols)
-    x = scale_by_col(x, odd_cols)
-    return x
+#     even_cols = [2*i for i in range(x.shape[1] // 2)]
+#     odd_cols = [2*i+1 for i in range(x.shape[1] // 2)]
+#     x = scale_by_col(x, even_cols)
+#     x = scale_by_col(x, odd_cols)
+#     return x
 
 # class MLHitDetector(HitDetector):
 #     @staticmethod

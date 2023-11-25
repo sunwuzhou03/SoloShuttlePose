@@ -1,0 +1,448 @@
+2023-11-20 20:13:35,419 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 20:16:17,326 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 20:16:24,289 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 20:16:43,856 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 20:18:57,446 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 20:18:57,590 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 20:19:03,977 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:44:31,105 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:47:32,782 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:50:15,486 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:51:38,612 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:51:42,192 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:51:51,710 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:53:02,523 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:53:02,580 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+
+2023-11-20 21:53:05,704 - ERROR - Traceback (most recent call last):
+  File "E:\paper reading-v1\SoloShuttlePose\src/tools\trajectory.py", line 14, in __init__
+    trajectory = trajectory.assign(X_pred=trajectory.X.interpolate(method='slinear'))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\generic.py", line 8206, in interpolate
+    new_data = obj._mgr.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\base.py", line 265, in interpolate
+    return self.apply_with_block(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\managers.py", line 354, in apply
+    applied = getattr(b, f)(**kwargs)
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\internals\blocks.py", line 1507, in interpolate
+    new_values = self.array_values.interpolate(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\arrays\numpy_.py", line 297, in interpolate
+    missing.interpolate_2d_inplace(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 370, in interpolate_2d_inplace
+    np.apply_along_axis(func, axis, data)  # type: ignore[arg-type]
+  File "<__array_function__ internals>", line 200, in apply_along_axis
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\numpy\lib\shape_base.py", line 379, in apply_along_axis
+    res = asanyarray(func1d(inarr_view[ind0], *args, **kwargs))
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 352, in func
+    _interpolate_1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 485, in _interpolate_1d
+    yvalues[invalid] = _interpolate_scipy_wrapper(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\pandas\core\missing.py", line 548, in _interpolate_scipy_wrapper
+    terp = interpolate.interp1d(
+  File "D:\Users\86153\anaconda3\envs\tracknetv3\lib\site-packages\scipy\interpolate\_interpolate.py", line 627, in __init__
+    raise ValueError("x and y arrays must have at "
+ValueError: x and y arrays must have at least 2 entries
+

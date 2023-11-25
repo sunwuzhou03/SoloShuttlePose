@@ -108,6 +108,7 @@ for dir in os.listdir(action4match):
                     ef-=1
                 ef=ef+1
 
+                wrong=False
                 if player_dict[str(frame_num)]['top'] is None or player_dict[str(frame_num)]['bottom'] is None:
                     top_kps=[[] for _ in range(bf,ef)]
 
@@ -122,10 +123,16 @@ for dir in os.listdir(action4match):
                                 else:
                                     x_ls.append(float('nan'))
                                     y_ls.append(float('nan'))      
-                                        
-                        x_pd=pd.DataFrame(x_ls.copy()).interpolate(method='slinear')
-                        y_pd=pd.DataFrame(y_ls.copy()).interpolate(method='slinear')
-                        
+                        try:             
+                            x_pd=pd.DataFrame(x_ls.copy()).interpolate(method='slinear')
+                            y_pd=pd.DataFrame(y_ls.copy()).interpolate(method='slinear')
+                        except:
+                            x_pd=pd.DataFrame(x_ls.copy())
+                            y_pd=pd.DataFrame(y_ls.copy())
+                            wrong=True
+                            break
+                            
+
                         x_pd.ffill(inplace=True)
                         x_pd.bfill(inplace=True)
                         
@@ -154,9 +161,15 @@ for dir in os.listdir(action4match):
                                     x_ls.append(float('nan'))
                                     y_ls.append(float('nan'))      
                                         
-                        x_pd=pd.DataFrame(x_ls.copy()).interpolate(method='slinear')
-                        y_pd=pd.DataFrame(y_ls.copy()).interpolate(method='slinear')
-                        
+                        try:             
+                            x_pd=pd.DataFrame(x_ls.copy()).interpolate(method='slinear')
+                            y_pd=pd.DataFrame(y_ls.copy()).interpolate(method='slinear')
+                        except:
+                            x_pd=pd.DataFrame(x_ls.copy())
+                            y_pd=pd.DataFrame(y_ls.copy())
+                            wrong=True
+                            break
+
                         x_pd.ffill(inplace=True)
                         x_pd.bfill(inplace=True)
                         
@@ -171,39 +184,45 @@ for dir in os.listdir(action4match):
                 if frame_num>ef or frame_num<bf:
                     print("bf and bf is wrong") 
                     print(frame_num,bf,ef)                   
+                try:
+                    ball=(loca_dict[str(frame_num)]['x'],loca_dict[str(frame_num)]['y'])
 
-                ball=(loca_dict[str(frame_num)]['x'],loca_dict[str(frame_num)]['y'])
-
-                row['top'] = player_dict[str(frame_num)]['top'].copy()
-                row['bottom'] = player_dict[str(frame_num)]['bottom'].copy()
-
-
-                top_kp15,top_kp16=row['top'][15].copy(),row['top'][16].copy()
-                top_kp17=[(top_kp15[0]+top_kp16[0])/2,(top_kp15[1]+top_kp16[1])/2]
-                top_kp=row['top'].copy()
-                row['top'].append(top_kp17)
-
-                bottom_kp15,bottom_kp16=row['bottom'][15].copy(),row['bottom'][16].copy()
-                bottom_kp17=[(bottom_kp15[0]+bottom_kp16[0])/2,(bottom_kp15[1]+bottom_kp16[1])/2]
-                bottom_kp=row['bottom'].copy()
-                row['bottom'].append(bottom_kp17)
+                    row['top'] = player_dict[str(frame_num)]['top'].copy()
+                    row['bottom'] = player_dict[str(frame_num)]['bottom'].copy()
 
 
-                db = dist_to_pose(np.array(bottom_kp), np.array([row['ball'][0],row['ball'][1]]))
-                dt = dist_to_pose(np.array(top_kp), np.array([row['ball'][0],row['ball'][1]]))
+                    top_kp15,top_kp16=row['top'][15].copy(),row['top'][16].copy()
+                    top_kp17=[(top_kp15[0]+top_kp16[0])/2,(top_kp15[1]+top_kp16[1])/2]
+                    top_kp=row['top'].copy()
+                    row['top'].append(top_kp17)
+
+                    bottom_kp15,bottom_kp16=row['bottom'][15].copy(),row['bottom'][16].copy()
+                    bottom_kp17=[(bottom_kp15[0]+bottom_kp16[0])/2,(bottom_kp15[1]+bottom_kp16[1])/2]
+                    bottom_kp=row['bottom'].copy()
+                    row['bottom'].append(bottom_kp17)
+
+
+                    db = dist_to_pose(np.array(bottom_kp), np.array([row['ball'][0],row['ball'][1]]))
+                    dt = dist_to_pose(np.array(top_kp), np.array([row['ball'][0],row['ball'][1]]))
+                        
+                    if db < dt:
+                        person = 1
+                    else:
+                        person = 2
                     
-                if db < dt:
-                    person = 1
-                else:
-                    person = 2
-                
-                if nhit % 2:
-                    person = 3 - person
-                votes[person - 1] += 1
-                nhit += 1
-                # 将修改后的row添加到新的DataFrame中
-                new_df.append(row)
-
+                    if nhit % 2:
+                        person = 3 - person
+                    votes[person - 1] += 1
+                    nhit += 1
+                    # 将修改后的row添加到新的DataFrame中
+                    new_df.append(row)    
+                except:
+                    wrong=True
+                    print(csv_path)
+                if wrong:
+                    break
+            if wrong:
+                continue
             last = 2 if votes[0] > votes[1] else 1
             # if (match, rally) in manual_label:
             #     last = 3 - manual_label[match, rally]

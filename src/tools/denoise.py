@@ -563,7 +563,8 @@ def smooth(json_path, court,save_path="res/ball/loca_info(denoise)"):
 
         elif mis4[i] == 1:
             miss_point = i
-            if mis3_X[miss_point -
+            
+            if i+6<len(mis3_X) and i+5<len(mis3_X) and i+4<len(mis3_X) and  mis3_X[miss_point -
                       3] != 0 and mis3_X[miss_point - 2] != 0 and mis3_X[
                           miss_point -
                           1] != 0 and mis3_X[miss_point + 4] != 0 and mis3_X[

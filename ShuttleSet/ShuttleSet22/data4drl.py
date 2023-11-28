@@ -27,6 +27,7 @@ url4drl="ShuttleSet/ShuttleSet22/match_db"
 
 result_path="res"
 make_data4drl=False
+
 if make_data4drl:
 
     for dir in os.listdir(data4drl):
@@ -300,7 +301,6 @@ for dir in os.listdir(data4drl):
         # # 保存DataFrame到Excel文件
         # df.to_excel(os.path.join(data_path,filename), index=False)
 
-
         # print(data_path)
         ls11=[]
         ls12=[]
@@ -358,25 +358,57 @@ for dir in os.listdir(data4drl):
 
         print(1,dir_name,len(ls11),len(ls12))
         if len(ls11)<len(ls12):
-            # print(ls11)
+            print(ls11)
             pass
         else:
-            # print(ls12)
+            print(ls12)
             pass
         
         print(2,dir_name,len(ls21),len(ls22))
         if len(ls21)<len(ls22):
-            # print(ls21)
+            print(ls21)
             pass
         else:
-            # print(ls22)
+            print(ls22)
             pass
 
         print(3,dir_name,len(ls31),len(ls32))
         if len(ls31)<len(ls32):
-            # print(ls31)
+            print(ls31)
             pass
         else:
-            # print(ls32)
+            print(ls32)
             pass
     
+
+for dir in os.listdir(data4drl):
+    if os.path.isdir(os.path.join(data4drl, dir)):
+        dir_name = os.path.basename(dir)
+        data_path=os.path.join(data4drl,dir_name)
+
+        mutual_pos_path=os.path.join(data_path,"apos.xlsx")
+        pos_df=pd.read_excel(mutual_pos_path)
+        # print(pos_df)
+
+        round_pos=[{str(pos_df.loc[0,'player']):str(pos_df.loc[0,'pos'])},\
+                   {str(pos_df.loc[1,'player']):str(pos_df.loc[1,'pos'])},\
+                    {str(pos_df.loc[2,'player']):str(pos_df.loc[2,'pos'])}]
+        
+        for csv_path in glob.glob(os.path.join(data_path, "*.csv")):
+            csv_name=os.path.basename(csv_path).split('.')[0]
+            _,round_number=extract_numbers(csv_name)
+            df=pd.read_csv(csv_path)
+
+            one_pos='top'
+            two_pos='bottom'
+            # print(round_pos[round_number-1])
+            for key,value in round_pos[round_number-1].items():
+                if one_pos!=str(value):
+                    one_pos,two_pos=two_pos,one_pos
+            for index,row in df.iterrows():
+                if str(row['player']) in round_pos[round_number-1].keys(): 
+                    df.loc[index,'pos']=one_pos
+                else:
+                    df.loc[index,'pos']=two_pos
+            
+            df.to_csv(csv_path, index=False, encoding="utf-8")

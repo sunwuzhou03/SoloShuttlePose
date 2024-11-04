@@ -42,4 +42,8 @@ For more details about the flags and output format, please see [docs/run.md](doc
 
 [yt-dlp](https://github.com/yt-dlp/yt-dlp)
 
+# Support
+
+This project is a collaborative effort with Weizhi Tao, supported by RIsports and The Hong Kong Polytechnic University (PolyU).
+
 

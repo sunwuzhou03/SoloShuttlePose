@@ -45,5 +45,3 @@ For more details about the flags and output format, please see [docs/run.md](doc
 # Support
 
 This project is a collaborative effort with Weizhi Tao, supported by RIsports and The Hong Kong Polytechnic University (PolyU).
-
-
